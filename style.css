@@ -1,9 +1,9 @@
 :root {
-    --bg-dark: #0F1115;
-    --primary-blue: #00F0FF;
+    --bg-dark: #000000;
+    --primary-blue: #00E5FF;
     --secondary-red: #FF2A2A;
     --text-white: #FFFFFF;
-    --text-grey: #E0E0E0;
+    --text-grey: #A0AAB5;
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -632,5 +632,268 @@ section h2 {
         height: 55px;
         bottom: 20px;
         right: 20px;
+    }
+}
+
+/* --- Added Testimonials Section --- */
+.testimonials-section {
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.stagger-testimonials-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.testimonials-cards-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.testimonial-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 2rem;
+    transition: all 0.5s ease-in-out;
+    background: var(--bg-dark);
+    border: 2px solid var(--glass-border);
+    color: var(--text-grey);
+    cursor: pointer;
+    pointer-events: auto;
+    clip-path: polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0);
+}
+.testimonial-card.is-center {
+    z-index: 10;
+    background: var(--primary-blue);
+    color: var(--bg-dark);
+    border-color: var(--primary-blue);
+    box-shadow: 0px 8px 0px 4px var(--glass-border);
+}
+.testimonial-card:hover {
+    border-color: rgba(0, 240, 255, 0.5);
+}
+.testimonial-card.is-center:hover {
+    border-color: var(--primary-blue);
+}
+.testimonial-card .corner-accent {
+    position: absolute;
+    right: -2px;
+    top: 48px;
+    width: 70.71px;
+    height: 2px;
+    background: var(--glass-border);
+    transform-origin: top right;
+    transform: rotate(45deg);
+    display: block;
+}
+.testimonial-card.is-center .corner-accent {
+    background: var(--bg-dark);
+    opacity: 0.2;
+}
+.test-avatar {
+    margin-bottom: 1rem;
+    height: 56px;
+    width: 48px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 3px 3px 0px var(--bg-dark);
+}
+.testimonial-card h3 {
+    font-size: 1.1rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.4;
+    color: var(--text-white);
+}
+.testimonial-card.is-center h3 {
+    color: var(--bg-dark);
+    font-weight: 700;
+}
+.test-author {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--text-grey);
+}
+.testimonial-card.is-center .test-author {
+    color: rgba(0, 0, 0, 0.7);
+}
+.testimonials-controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 20;
+}
+.control-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+    border: 2px solid var(--glass-border);
+    color: var(--text-white);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.control-btn:hover {
+    background: var(--primary-blue);
+    color: var(--bg-dark);
+    border-color: var(--primary-blue);
+}
+
+/* --- Added Contact Section --- */
+.contact-section {
+    padding-bottom: 120px;
+}
+.contact-card-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: var(--bg-dark);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 240, 255, 0.1), 0 2px 4px -1px rgba(0, 240, 255, 0.06);
+    min-height: 500px;
+}
+.corner-plus {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: var(--primary-blue);
+}
+.corner-plus.top-left { top: -12px; left: -12px; }
+.corner-plus.top-right { top: -12px; right: -12px; }
+.corner-plus.bottom-left { bottom: -12px; left: -12px; }
+.corner-plus.bottom-right { bottom: -12px; right: -12px; }
+
+.contact-info-panel {
+    padding: 3rem;
+}
+.contact-title {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-transform: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+.contact-desc {
+    color: var(--text-grey);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.contact-methods.grid-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.contact-method-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.contact-method-item.full-col {
+    grid-column: span 2;
+}
+.icon-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+}
+.method-label {
+    font-weight: 500;
+    color: var(--text-white);
+    margin-bottom: 0.2rem;
+}
+.method-val {
+    font-size: 0.75rem;
+    color: var(--text-grey);
+}
+.contact-form-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 1px solid var(--glass-border);
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+}
+.contact-form-wrapper {
+    width: 100%;
+}
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-white);
+}
+.custom-input, .custom-textarea {
+    width: 100%;
+    background: var(--bg-dark);
+    border: 1px solid var(--glass-border);
+    color: var(--text-white);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+.custom-input:focus, .custom-textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.2);
+}
+.custom-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+.w-full {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .contact-card-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-panel {
+        border-left: none;
+        border-top: 1px solid var(--glass-border);
+    }
+}
+@media (max-width: 600px) {
+    .contact-methods.grid-methods {
+        grid-template-columns: 1fr;
+    }
+    .contact-method-item.full-col {
+        grid-column: span 1;
     }
 }

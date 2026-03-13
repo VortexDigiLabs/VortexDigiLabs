@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex Digi Labs | Media Hub</title>
+    <title>Vortex Digi Labs</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,185 +13,240 @@
         rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Spline 3D Viewer Script (Flexible support for future splines) -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js"></script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">VORTEX <span>DIGI LABS</span></div>
         <nav>
-            <a href="#before-after">Before / After</a>
-            <a href="#creations">Creations</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#models">Models</a>
             <a href="#clients">Clients</a>
-            <a href="#mix-n-match">Mix n Match</a>
-            <a href="#prompts">Prompts</a>
-            <a href="#short-vids">Short Vids</a>
             <a href="#resources">Resources</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact" class="nav-btn">Contact</a>
         </nav>
     </header>
 
-    <section class="hero text-center-hero">
-        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h1>WELCOME TO THE VORTEX.</h1>
-            <p style="margin-top: 20px;">Explore our categorized hub covering everything from Google Business
-                Optimization to advanced Cyberpunk creations.</p>
-            <a href="#before-after" class="btn-primary" style="margin-top:20px;">EXPLORE MEDIA</a>
+    <section class="hero text-center-hero" style="position: relative; overflow: hidden;">
+        <!-- Flexible enough to easily add spline 3D models later -->
+        <div class="spline-container"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 1;">
+            <spline-viewer url="https://prod.spline.design/8xXTVdpEThEgW4uY/scene.splinecode"
+                style="width: 100%; height: 100%;" events-target="global"></spline-viewer>
+        </div>
+
+        <div class="hero-content"
+            style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
+            <h1 style="font-size: 4rem; letter-spacing: 2px; text-transform: uppercase;">Vortex Digi<br>Labs.</h1>
+            <p style="margin-top: 20px; font-size: 1.4rem;">Empowering enterprises with state-of-the-art machine
+                learning, automation, and predictive intelligence.</p>
+            <a href="#solutions" class="btn-primary btn-large"
+                style="margin-top:30px; display: inline-block; width: auto;">DISCOVER MORE</a>
         </div>
     </section>
 
-    <!-- SECTION 1: Before & After -->
-    <section id="before-after" class="portfolio">
-        <h2>BEFORE & AFTER</h2>
-        <p class="section-desc text-center">Drag the slider to see the transformation.</p>
+    <!-- SECTION 1: Solutions -->
+    <section id="solutions" class="services">
+        <h2>INTELLIGENT SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card glass-panel">
+                <h3>Machine Learning</h3>
+                <p>Custom models trained on your data to uncover hidden patterns and predict future trends.</p>
+            </div>
+            <div class="service-card glass-panel">
+                <h3>Process Automation</h3>
+                <p>Streamline workflows with intelligent automation that learns and adapts to your business needs.</p>
+            </div>
+            <div class="service-card glass-panel">
+                <h3>Generative AI</h3>
+                <p>Deploy cutting-edge LLMs and creative AI tools tailored for your proprietary knowledge base.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: AI Models -->
+    <section id="models" class="portfolio">
+        <h2>OUR MODELS</h2>
+        <p class="section-desc text-center">Interactive 3D representations and interfaces for our deployed systems.</p>
         <div class="portfolio-grid">
-            <div class="portfolio-item glass-panel">
-                <h4>Project Alpha</h4>
-                <div class="comparison-slider mini-slider">
-                    <div class="comparison-before">
-                        <img src="assets/images/before-after/1-before.jpg" onerror="this.style.display='none'">
-                        <div class="fallback-img before-fallback">Before</div>
-                    </div>
-                    <div class="comparison-after">
-                        <img src="assets/images/before-after/1-after.jpg" onerror="this.style.display='none'">
-                        <div class="fallback-img after-fallback">After</div>
-                    </div>
-                    <div class="slider-handle">
-                        <div class="slider-line"></div>
-                        <div class="slider-button"></div>
-                    </div>
+            <!-- Flexible placeholders for Spline Models -->
+            <div class="portfolio-item glass-panel instruction-panel"
+                style="min-height: 400px; position: relative; overflow: hidden;">
+                <spline-viewer url="https://prod.spline.design/placeholder1/scene.splinecode"
+                    style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 0; opacity: 0.2; pointer-events: none;"></spline-viewer>
+                <div style="position: relative; z-index: 1;">
+                    <h4 style="color: var(--primary-blue);">Vision System Alpha</h4>
+                    <p style="font-size: 14px;">[Spline Model Ready container]</p>
                 </div>
             </div>
-
-            <div class="portfolio-item glass-panel">
-                <h4>Project Beta</h4>
-                <div class="comparison-slider mini-slider">
-                    <div class="comparison-before">
-                        <img src="assets/images/before-after/2-before.jpg" onerror="this.style.display='none'">
-                        <div class="fallback-img before-fallback">Before</div>
-                    </div>
-                    <div class="comparison-after">
-                        <img src="assets/images/before-after/2-after.jpg" onerror="this.style.display='none'">
-                        <div class="fallback-img after-fallback">After</div>
-                    </div>
-                    <div class="slider-handle">
-                        <div class="slider-line"></div>
-                        <div class="slider-button"></div>
-                    </div>
+            <div class="portfolio-item glass-panel instruction-panel"
+                style="min-height: 400px; position: relative; overflow: hidden;">
+                <spline-viewer url="https://prod.spline.design/placeholder2/scene.splinecode"
+                    style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 0; opacity: 0.2; pointer-events: none;"></spline-viewer>
+                <div style="position: relative; z-index: 1;">
+                    <h4 style="color: var(--primary-blue);">Neural Net Core</h4>
+                    <p style="font-size: 14px;">[Spline Model Ready container]</p>
                 </div>
-            </div>
-
-            <div class="portfolio-item glass-panel instruction-panel">
-                <p>Drop paired images (e.g. 1-before.jpg, 1-after.jpg) in the <br><b>assets/images/before-after/</b>
-                    folder.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: Creations -->
-    <section id="creations" class="gallery-section">
-        <h2>CREATIONS</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/creations/1.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Drop images in assets/images/creations/</div>
-            </div>
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/creations/2.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Creation #2</div>
-            </div>
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/creations/3.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Creation #3</div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 3: Clients -->
     <section id="clients" class="gallery-section">
-        <h2>CLIENTS</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/clients/1.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Drop images in assets/images/clients/</div>
-            </div>
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/clients/2.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Client #2</div>
-            </div>
+        <h2>TRUSTED BY FORWARD-THINKING TEAMS</h2>
+        <div class="client-logos"
+            style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+            <div class="glass-panel"
+                style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; opacity: 0.6; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 1.2rem; transition: opacity 0.3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">COMPANY ONE</div>
+            <div class="glass-panel"
+                style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; opacity: 0.6; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 1.2rem; transition: opacity 0.3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">NEXUS LOGISTICS</div>
+            <div class="glass-panel"
+                style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; opacity: 0.6; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 1.2rem; transition: opacity 0.3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">QUANTUM CORP</div>
+            <div class="glass-panel"
+                style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; opacity: 0.6; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 1.2rem; transition: opacity 0.3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">STELLAR DATA</div>
         </div>
     </section>
 
-    <!-- SECTION 4: Mix n Match -->
-    <section id="mix-n-match" class="gallery-section">
-        <h2>MIX N MATCH</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/mix-n-match/1.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Drop images in assets/images/mix-n-match/</div>
-            </div>
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/mix-n-match/2.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Mix #2</div>
-            </div>
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/mix-n-match/3.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Mix #3</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: Prompts -->
-    <section id="prompts" class="gallery-section">
-        <h2>PROMPTS</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item glass-panel">
-                <img src="assets/images/prompts/1.jpg" onerror="this.style.display='none'">
-                <div class="gallery-overlay">Drop images in assets/images/prompts/</div>
-            </div>
-            <div class="gallery-item glass-panel prompt-card">
-                <h3>Cyberpunk UI Prompt</h3>
-                <p>"A futuristic neon user interface showing map optimization statistics..."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: Short Vids -->
-    <section id="short-vids" class="gallery-section">
-        <h2>SHORT VIDS</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item glass-panel video-container">
-                <video src="assets/images/short-vids/vid1.mp4" controls loop></video>
-                <div class="gallery-overlay">Drop videos in assets/images/short-vids/</div>
-            </div>
-            <div class="gallery-item glass-panel video-container">
-                <video src="assets/images/short-vids/vid2.mp4" controls loop></video>
-                <div class="gallery-overlay">Video #2</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: Resources -->
+    <!-- SECTION 4: Resources -->
     <section id="resources" class="services">
         <h2>RESOURCES</h2>
         <div class="services-grid">
             <div class="service-card glass-panel resource-card">
-                <h3>Brand Assets</h3>
-                <p class="price">ZIP <span>Folder</span></p>
-                <a href="assets/images/resources/brand-assets.zip" class="btn-primary"
-                    style="margin-top:20px">DOWNLOAD</a>
-                <p style="margin-top:10px; font-size:14px; text-transform:none;">Drop files in assets/images/resources/
-                </p>
+                <h3>API Documentation</h3>
+                <p class="price">DEV <span>Portal</span></p>
+                <a href="#" class="btn-primary" style="margin-top:20px">VIEW DOCS</a>
             </div>
             <div class="service-card glass-panel resource-card">
-                <h3>Digital Detox Guide</h3>
-                <p class="price">PDF <span>Document</span></p>
-                <a href="assets/images/resources/guide.pdf" class="btn-primary" style="margin-top:20px"
-                    target="_blank">VIEW FILE</a>
+                <h3>Whitepapers</h3>
+                <p class="price">PDF <span>Documents</span></p>
+                <a href="#" class="btn-primary" style="margin-top:20px">DOWNLOAD</a>
             </div>
-            <div class="service-card glass-panel resource-card">
-                <h3>Setup Scripts</h3>
-                <p class="price">TXT / Code <span>Snippets</span></p>
-                <a href="assets/images/resources/scripts.txt" class="btn-primary" style="margin-top:20px"
-                    target="_blank">VIEW SCRIPT</a>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <h2>TESTIMONIALS</h2>
+        <div class="stagger-testimonials-container" id="testimonialsWrapper">
+            <div id="testimonialsCards" class="testimonials-cards-area"></div>
+            <div class="testimonials-controls">
+                <button id="prevTestimonialBtn" class="control-btn" aria-label="Previous testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+                <button id="nextTestimonialBtn" class="control-btn" aria-label="Next testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Contact -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card-container">
+            <svg class="corner-plus top-left" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+            </svg>
+            <svg class="corner-plus top-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+            </svg>
+            <svg class="corner-plus bottom-left" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+            </svg>
+            <svg class="corner-plus bottom-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+            </svg>
+
+            <div class="contact-info-panel">
+                <h2 class="contact-title">Get in touch</h2>
+                <p class="contact-desc">If you have any questions regarding our Services or need help, please fill out
+                    the form here. We do our best to respond within 1 business day.</p>
+
+                <div class="contact-methods grid-methods">
+                    <div class="contact-method-item">
+                        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg></div>
+                        <div class="method-text">
+                            <p class="method-label">Email</p>
+                            <p class="method-val">contact@vortexdigi.dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-method-item">
+                        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg></div>
+                        <div class="method-text">
+                            <p class="method-label">Phone</p>
+                            <p class="method-val">+92 312 1234567</p>
+                        </div>
+                    </div>
+                    <div class="contact-method-item full-col">
+                        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg></div>
+                        <div class="method-text">
+                            <p class="method-label">Address</p>
+                            <p class="method-val">Faisalabad, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <form class="contact-form-wrapper" action="https://formspree.io/f/xwvrkoaz" method="POST">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="custom-input" placeholder="Your Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="custom-input" placeholder="you@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" class="custom-input" placeholder="+123456789" />
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" class="custom-textarea" placeholder="How can we help?"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full" style="margin-top: 20px;">Submit</button>
+                </form>
             </div>
         </div>
     </section>
